@@ -88,5 +88,8 @@ choco install kubernetes-cli
 #Rancher desktop
 choco install rancher-desktop
 
+#Glogg (log reader)
+choco install glogg
+
 # Update all packages
 cup all -y
