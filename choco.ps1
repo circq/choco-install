@@ -15,6 +15,12 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 # Global acceptation
 choco feature enable -n allowGlobalConfirmation
 
+# Set proxy in choco config (if needed)
+choco config set --name="proxy" --value="http://proxy.domain:8080"
+choco config set --name="proxyUser" --value="user"
+choco config set --name="proxyPassword" --value="password"
+choco config set --name="proxyBypassOnLocal " --value="true"
+
 # SSMS
 choco install sql-server-management-studio -y
 
@@ -90,6 +96,12 @@ choco install rancher-desktop
 
 #Glogg (log reader)
 choco install glogg
+
+#VMware Octant
+choco install octant
+
+#ArgoCD CLI
+choco install argocd-cli
 
 # Update all packages
 cup all -y
