@@ -104,4 +104,4 @@ choco install octant
 choco install argocd-cli
 
 # Update all packages
-cup all -y
+choco upgrade all -y
